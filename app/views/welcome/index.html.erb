@@ -1,0 +1,45 @@
+<%= form_for User.new, url: root_url do |f| %>
+  <fieldset>
+    <legend>Default Configuration</legend>
+
+    <div>
+      <%= f.label :country_code, "Default Config" %>
+      <%= f.country_select :country_code %>
+    </div>
+
+    <div>
+      <%= f.label :country_code, "With Priority Countries" %>
+      <%= f.country_select :country_code, ["Great Britain", "United States"] %>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>With ISO-3166 Alpha-2 Codes</legend>
+
+    <div>
+      <%= f.label :country_code, "ISO codes" %>
+      <%= f.country_select :country_code, nil, iso_codes: true %>
+    </div>
+
+    <div>
+      <%= f.label :country_code, "With Priority Countries and ISO Codes" %>
+      <%= f.country_select :country_code, ["GB", "FR", "DE"], iso_codes: true %>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>With I18n Support (`I18n.locale = :es`)</legend>
+
+    <% I18n.with_locale(:es) do %>
+      <div>
+        <%= f.label :country_code, "ISO codes" %>
+        <%= f.country_select :country_code, nil, iso_codes: true %>
+      </div>
+
+      <div>
+        <%= f.label :country_code, "With Priority Countries and ISO Codes" %>
+        <%= f.country_select :country_code, ["GB", "FR", "DE"], iso_codes: true %>
+      </div>
+    <% end %>
+  </fieldset>
+<% end %>
