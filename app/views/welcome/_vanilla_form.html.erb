@@ -13,6 +13,24 @@
       <%= f.country_select :country_code, priority_countries: ["GB", "US"] %>
       <code>f.country_select :country_code, priority_countries: ["GB", "US"]</code>
     </p>
+
+    <p>
+      <%= f.label :country_code, "With Prompt" %>
+      <%= f.country_select :country_code, priority_countries: ["GB", "US"], prompt: "Select a Country" %>
+      <code>f.country_select :country_code, priority_countries: ["GB", "US"], prompt: "Select a Country"</code>
+    </p>
+
+    <p>
+      <%= f.label :country_code, "Including a blank selection" %>
+      <%= f.country_select :country_code, priority_countries: ["GB", "US"], include_blank: true %>
+      <code>f.country_select :country_code, priority_countries: ["GB", "US"], include_blank: true</code>
+    </p>
+
+    <p>
+      <%= f.label :country_code, "Adding HTML attributes" %>
+      <%= f.country_select :country_code, { priority_countries: ["GB", "US"] }, class: 'required-field', required: true %>
+      <code>f.country_select :country_code, { priority_countries: ["GB", "US"] }, class: 'required-field', required: true </code>
+    </p>
   </fieldset>
 
   <fieldset>
@@ -46,6 +64,22 @@
       <%= f.label :country_code, "With Priority Countries" %>
       <%= f.country_select :country_code, only: ["US"], priority_countries: ["GB", "US"] %>
       <code>f.country_select :country_code, only: ["US"], priority_countries: ["GB", "US"]</code>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Excluding Countries</legend>
+
+    <p>
+      <%= f.label :country_code, "Excluding Latvia and Signapore" %>
+      <%= f.country_select :country_code, except: ["LV","SG"] %>
+      <code>f.country_select :country_code, except: ["LV","SG"]</code>
+    </p>
+
+    <p>
+      <%= f.label :country_code, "With Priority Countries" %>
+      <%= f.country_select :country_code, except: ["US"], priority_countries: ["GB", "US"] %>
+      <code>f.country_select :country_code, except: ["US"], priority_countries: ["GB", "US"]</code>
     </p>
   </fieldset>
 <% end %>
