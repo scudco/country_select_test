@@ -1,5 +1,6 @@
-PATH
-  remote: ../country_select
+GIT
+  remote: git://github.com/stefanpenner/country_select.git
+  revision: 9497df504bf47ff85bdb3c588d2fbbe98e44533e
   specs:
     country_select (2.0.0.beta2)
       countries (~> 0.9.3)
