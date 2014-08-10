@@ -1,0 +1,30 @@
+<%= simple_form_for User.new, url: root_url do |f| %>
+  <fieldset>
+    <legend>Default Configuration</legend>
+    <%= f.input :country_code %>
+    <code>f.input :country_code</code>
+
+    <%= f.input :country_code, priority: ["GB", "US"] %>
+    <code>f.input :country_code, priority: ["GB", "US"]</code>
+  </fieldset>
+
+  <fieldset>
+    <legend>With I18n Support (<code>I18n.locale = :es</code>)</legend>
+    <% I18n.with_locale(:es) do %>
+      <%= f.input :country_code %>
+      <code>f.input :country_code</code>
+
+      <%= f.input :country_code, priority: ["GB", "US"] %>
+      <code>f.input :country_code, priority: ["GB", "US"]</code>
+    <% end %>
+  </fieldset>
+
+  <fieldset>
+    <legend>With Only Chosen Countries</legend>
+    <%= f.input :country_code, only: ["LV","SG"] %>
+    <code>f.input :country_code, only: ["LV","SG"]</code>
+
+    <%= f.input :country_code, priority: ["GB", "US"], only: ["US"] %>
+    <code>f.input :country_code, priority: ["GB", "US"], only: ["US"]</code>
+  </fieldset>
+<% end %>

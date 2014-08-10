@@ -1,0 +1,27 @@
+<%= semantic_form_for User.new, url: root_url do |f| %>
+  <%= f.inputs name: "Default Configuration" do %>
+    <%= f.input :country_code, as: :country %>
+    <code>f.input :country_code, as: :country</code>
+
+    <%= f.input :country_code, as: :country, priority_countries: ["GB", "US"] %>
+    <code>f.input :country_code, as: :country, priority_countries: ["GB", "US"]</code>
+  <% end %>
+
+  <%= f.inputs name: "With I18n Support (<code>I18n.locale = :es</code>)" do %>
+    <% I18n.with_locale(:es) do %>
+      <%= f.input :country_code, as: :country %>
+      <code>f.input :country_code, as: :country</code>
+
+      <%= f.input :country_code, as: :country, priority_countries: ["GB", "US"] %>
+      <code>f.input :country_code, as: :country, priority_countries: ["GB", "US"]</code>
+    <% end %>
+  <% end %>
+
+  <%= f.inputs name: "With Only Chosen Countries" do %>
+    <%= f.input :country_code, as: :country, only: ["LV","SG"] %>
+    <code>f.input :country_code, as: :country, only: ["LV","SG"]</code>
+
+    <%= f.input :country_code, as: :country, priority_countries: ["GB", "US"], only: ["US"] %>
+    <code>f.input :country_code, as: :country, priority_countries: ["GB", "US"], only: ["US"]</code>
+  <% end %>
+<% end %>
