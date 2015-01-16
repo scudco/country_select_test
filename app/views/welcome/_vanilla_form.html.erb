@@ -82,4 +82,9 @@
       <code>f.country_select :country_code, except: ["US"], priority_countries: ["GB", "US"]</code>
     </p>
   </fieldset>
+
+  <fieldset>
+    <legend>Without Form Object</legend>
+    <%= country_select("address", "country", only: ["GB", "FR", "DE"]) %>
+  </fieldset>
 <% end %>
