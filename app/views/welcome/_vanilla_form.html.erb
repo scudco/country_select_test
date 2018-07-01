@@ -89,5 +89,9 @@
       <%= country_select("address", "country", only: ["GB", "FR", "DE"]) %>
       <code>country_select("address", "country", only: ["GB", "FR", "DE"])</code>
     </p>
+    <p>
+      <%= country_select(nil, "country", only: ["GB", "FR", "DE"]) %>
+      <code>country_select(nil, "country", only: ["GB", "FR", "DE"])</code>
+    </p>
   </fieldset>
 <% end %>
