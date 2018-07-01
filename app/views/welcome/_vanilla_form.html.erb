@@ -1,4 +1,4 @@
-<%= form_for User.new, url: root_url do |f| %>
+<%= form_with scope: :user,  url: root_url do |f| %>
   <fieldset>
     <legend>Default Configuration</legend>
 
@@ -85,7 +85,9 @@
 
   <fieldset>
     <legend>Without Form Object</legend>
-    <%= country_select("address", "country", only: ["GB", "FR", "DE"]) %>
-    <code>country_select("address", "country", only: ["GB", "FR", "DE"])</code>
+    <p>
+      <%= country_select("address", "country", only: ["GB", "FR", "DE"]) %>
+      <code>country_select("address", "country", only: ["GB", "FR", "DE"])</code>
+    </p>
   </fieldset>
 <% end %>
