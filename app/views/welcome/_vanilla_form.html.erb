@@ -94,4 +94,35 @@
       <code>country_select(nil, "country", only: ["GB", "FR", "DE"])</code>
     </p>
   </fieldset>
+
+  <fieldset>
+    <legend>Using a custom formatter</legend>
+    <p>Custom formatters can be defined in an initializer to fully customize <code>option</code> tags.</p>
+    <p>
+<pre><code>CountrySelect::FORMATS[:with_alpha2] = lambda do |country|
+  "#{country.name} (#{country.alpha2})"
+end</code></pre>
+    <p>
+      <%= f.label :country_code, "Using Custom Alpha2 Formatter" %>
+      <%= f.country_select :country_code,  format: :with_alpha2 %>
+      <code>f.country_select :country_code,  format: :with_alpha2</code>
+    </p>
+    <hr />
+    <p>
+<pre><code>CountrySelect::FORMATS[:with_data_attrs] = lambda do |country|
+  [
+    country.name,
+    country.alpha2,
+    {
+      'data-country-code' => country.country_code,
+      'data-alpha3' => country.alpha3
+    }
+  ]
+end</code></pre>
+    <p>
+      <%= f.label :country_code, "Using Custom Option Formatter With HTML <code>data</code> attributes".html_safe %>
+      <%= f.country_select :country_code,  format: :with_data_attrs %>
+      <code>f.country_select :country_code,  format: :with_data_attrs</code>
+    </p>
+  </fieldset>
 <% end %>
