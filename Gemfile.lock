@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/stefanpenner/country_select.git
-  revision: 8dc6cc78b6636c9accadaa54354f087ead25442e
+  revision: 53619321492bca9954c86a76b21752538ebd9d51
   specs:
-    country_select (3.1.1)
-      countries (~> 2.0)
+    country_select (4.0.0)
+      countries (~> 3.0)
       sort_alphabetical (~> 1.0)
 
 GEM
@@ -80,9 +80,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    countries (2.1.4)
+    countries (3.0.0)
       i18n_data (~> 0.8.0)
-      money (~> 6.9)
       sixarm_ruby_unaccent (~> 1.1)
       unicode_utils (~> 1.4)
     crass (1.0.4)
@@ -116,8 +115,6 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    money (6.11.3)
-      i18n (>= 0.6.4, < 1.1)
     msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.1)
