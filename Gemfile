@@ -61,12 +61,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-if ENV['DEBUG_LOCAL']
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'country_select', path: '../country_select'
-else
-  gem 'country_select', '5.0.0.pre'
-end
+gem 'country_select', '5.0.0.pre'
 
 gem 'simple_form'
 gem 'formtastic'
