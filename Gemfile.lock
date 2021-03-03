@@ -1,7 +1,7 @@
 PATH
   remote: ../country_select
   specs:
-    country_select (5.0.0)
+    country_select (5.0.0.pre)
       countries (~> 3.0)
       sort_alphabetical (~> 1.1)
 
@@ -243,4 +243,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.1.4
+   2.2.13

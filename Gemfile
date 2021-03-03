@@ -65,7 +65,7 @@ if ENV['DEBUG_LOCAL']
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'country_select', path: '../country_select'
 else
-  gem 'country_select', github: 'stefanpenner/country_select'
+  gem 'country_select', '5.0.0.pre'
 end
 
 gem 'simple_form'
