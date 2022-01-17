@@ -100,7 +100,7 @@
     <p>Custom formatters can be defined in an initializer to fully customize <code>option</code> tags.</p>
     <p>
 <pre><code>CountrySelect::FORMATS[:with_alpha2] = lambda do |country|
-  "#{country.name} (#{country.alpha2})"
+  "#{country.iso_short_name} (#{country.alpha2})"
 end</code></pre>
     <p>
       <%= f.label :country_code, "Using Custom Alpha2 Formatter" %>
@@ -111,7 +111,7 @@ end</code></pre>
     <p>
 <pre><code>CountrySelect::FORMATS[:with_data_attrs] = lambda do |country|
   [
-    country.name,
+    country.iso_short_name,
     country.alpha2,
     {
       'data-country-code' => country.country_code,

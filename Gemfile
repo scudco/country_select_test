@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 7.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4', group: :development
 gem 'pg', group: :production
@@ -56,6 +56,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'country_select', '6.0.0'
+gem 'country_select', '6.1.0'
+
 gem 'formtastic'
 gem 'simple_form'
