@@ -24,4 +24,9 @@
     <%= f.input :country_code, as: :country, priority_countries: ["GB", "US"], only: ["US"] %>
     <code>f.input :country_code, as: :country, priority_countries: ["GB", "US"], only: ["US"]</code>
   <% end %>
+
+  <%= f.inputs name: "With Unofficial Country Names" do %>
+    <%= f.input :country_code, as: :country, priority_countries: ["United Kingdom", "US"] %>
+    <code>f.input :country_code, as: :country, priority_countries: ["United Kingdom", "US"]</code>
+  <% end %>
 <% end %>

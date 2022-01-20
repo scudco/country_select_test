@@ -27,4 +27,10 @@
     <%= f.input :country_code, priority: ["GB", "US"], only: ["US"] %>
     <code>f.input :country_code, priority: ["GB", "US"], only: ["US"]</code>
   </fieldset>
+
+  <fieldset>
+    <legend>With Unofficial Country Names</legend>
+    <%= f.input :country_code, priority: ["United Kingdom", "US"] %>
+    <code>f.input :country_code, priority: ["United Kingdom", "US"]</code>
+  </fieldset>
 <% end %>

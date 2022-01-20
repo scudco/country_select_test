@@ -72,6 +72,6 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'country_select', '6.1.0'
+gem 'country_select', '6.1.1'
 gem 'formtastic'
 gem 'simple_form'
